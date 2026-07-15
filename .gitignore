@@ -1,0 +1,25 @@
+# --- Entorno Virtual ---
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# --- Archivos de Datos (Evitar subirlos al repo) ---
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# --- Resultados del Modelo (Pesos y checkpoints) ---
+results/checkpoints/*
+!results/checkpoints/.gitkeep
+results/logs/*
+!results/logs/.gitkeep
+
+# --- Configuraciones del editor ---
+.vscode/
+.idea/
+.ipynb_checkpoints/
