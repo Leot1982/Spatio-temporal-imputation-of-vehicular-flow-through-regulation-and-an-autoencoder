@@ -1,2 +1,2 @@
 # Spatio-temporal-imputation-of-vehicular-flow-through-regulation-and-an-autoencoder
-Este repositorio presenta un Proyecto piloto para reconstruir el flujo vehicular horario en el Hipercentro de Quito (con datos EPMMOP, ene 2025). Resuelve la pérdida de información en la red vial bajo dos enfoques críticos: la imputación de vacíos en el dataset y la estimación espacial de flujos en nodos no instrumentados.  
+This repository presents a pilot project to reconstruct hourly traffic flow in downtown Quito (using EPMMOP data, January 2025). It addresses the loss of information in the road network through two critical approaches: imputing gaps in the dataset and spatially estimating flows at uninstrumented nodes.  
