@@ -1,0 +1,91 @@
+import pandas as pd
+
+# Definición del Diccionario de Variables Conceptual (Normalizado)
+# Incluye explícitamente HORA_DEL_DIA y FLUJO_VEHICULAR
+diccionario_variables = [
+    {
+        'Variable': 'CRUCE',
+        'Nombre_Funcional': 'Intersección',
+        'Descripción': 'Nombre de la intersección o vía monitoreada',
+        'Tipo_Dato': 'Texto (String)',
+        'Valores_Rango_Aceptado': 'Nombres de vías/intersecciones (38 cruces únicos)',
+        'Ejemplo': 'Av. 6 de Diciembre y Gaspar de Villarroel'
+    },
+    {
+        'Variable': 'LATITUD',
+        'Nombre_Funcional': 'Latitud Geográfica',
+        'Descripción': 'Coordenada geográfica de latitud del sensor',
+        'Tipo_Dato': 'Decimal (Float)',
+        'Valores_Rango_Aceptado': 'Coordenadas decimales (-90 a 90). Sin datos en el dataset',
+        'Ejemplo': 'N/A'
+    },
+    {
+        'Variable': 'LONGITUD',
+        'Nombre_Funcional': 'Longitud Geográfica',
+        'Descripción': 'Coordenada geográfica de longitud del sensor',
+        'Tipo_Dato': 'Decimal (Float)',
+        'Valores_Rango_Aceptado': 'Coordenadas decimales (-180 a 180). Sin datos en el dataset',
+        'Ejemplo': 'N/A'
+    },
+    {
+        'Variable': 'CODIGO_SENSOR',
+        'Nombre_Funcional': 'ID del Sensor',
+        'Descripción': 'Identificador único del punto o equipo de conteo vehicular',
+        'Tipo_Dato': 'Texto (String)',
+        'Valores_Rango_Aceptado': 'Códigos alfanuméricos de identificación (147 sensores únicos)',
+        'Ejemplo': 'PM008-0-01'
+    },
+    {
+        'Variable': 'SENTIDO',
+        'Nombre_Funcional': 'Sentido Vial',
+        'Descripción': 'Dirección o trayectoria de circulación monitoreada',
+        'Tipo_Dato': 'Texto (String)',
+        'Valores_Rango_Aceptado': 'NORTE-SUR, ESTE-OESTE, SUR-NORTE, OESTE-ESTE, etc. (9 sentidos)',
+        'Ejemplo': 'NORTE-SUR'
+    },
+    {
+        'Variable': 'FECHA_LIMPIA',
+        'Nombre_Funcional': 'Fecha de Medición',
+        'Descripción': 'Fecha en que se realizó el conteo vehicular',
+        'Tipo_Dato': 'Fecha (Date)',
+        'Valores_Rango_Aceptado': 'Formato YYYY-MM-DD (31 días registrados)',
+        'Ejemplo': '2025-01-01'
+    },
+    {
+        'Variable': 'DIA_SEMANA',
+        'Nombre_Funcional': 'Día de la Semana',
+        'Descripción': 'Día correspondiente a la fecha de medición',
+        'Tipo_Dato': 'Texto (String)',
+        'Valores_Rango_Aceptado': 'Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo',
+        'Ejemplo': 'Miércoles'
+    },
+    {
+        'Variable': 'ES_FESTIVO',
+        'Nombre_Funcional': 'Feriado / Festivo',
+        'Descripción': 'Indicador que señala si la fecha corresponde a un día feriado o festivo',
+        'Tipo_Dato': 'Booleano (Bool)',
+        'Valores_Rango_Aceptado': 'True (Verdadero) / False (Falso)',
+        'Ejemplo': 'True'
+    },
+    {
+        'Variable': 'HORA_DEL_DIA',
+        'Nombre_Funcional': 'Hora del Día',
+        'Descripción': 'Hora específica en la que se registró el aforo vehicular (intervalo de 1 hora)',
+        'Tipo_Dato': 'Texto / Entero',
+        'Valores_Rango_Aceptado': 'Valores discretos únicamente de "00" a "23"',
+        'Ejemplo': '07'
+    },
+    {
+        'Variable': 'FLUJO_VEHICULAR',
+        'Nombre_Funcional': 'Conteo / Aforo Vehicular',
+        'Descripción': 'Número total de vehículos que transitaron durante esa hora para el sensor y sentido registrado',
+        'Tipo_Dato': 'Entero (Integer)',
+        'Valores_Rango_Aceptado': 'Enteros positivos (≥ 0). En el dataset varía entre 1 y 14,050',
+        'Ejemplo': '1781'
+    }
+]
+
+# Convertir la lista de diccionarios a un DataFrame de Pandas
+df_diccionario = pd.DataFrame(diccionario_variables)
+
+print("Código para la creación de 'diccionario_variables' y 'df_diccionario' guardado en 'creacion_diccionario.py'")
